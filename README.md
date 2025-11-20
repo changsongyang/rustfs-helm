@@ -17,16 +17,18 @@ RustFS helm chart supports **standalone and distributed mode**. For standalone m
 
 | parameter | description | default value |
 | -- | -- | -- |
-| replicaCount   | Number of cluster nodes.   |  Default is `4`. |
-| mode.standalone.enabled | RustFS standalone mode support, namely one pod one pvc. | Default is `false` |
-| mode.distributed.enabled | RustFS distributed mode support, namely multiple pod multiple pvc. | Default is `true`. |
+| replicaCount   | Number of cluster nodes.   |  `4`. |
+| mode.standalone.enabled | RustFS standalone mode support, namely one pod one pvc. | `false` |
+| mode.distributed.enabled | RustFS distributed mode support, namely multiple pod multiple pvc. | `true`. |
 | image.repository  | docker image repository.   |  rustfs/rustfs.  |
 | image.tag | the tag for rustfs docker image | "latest" |
 | secret.rustfs.access_key | RustFS Access Key ID | `rustfsadmin` |
 | secret.rustfs.secret_key | RustFS Secret Key ID | `rustfsadmin` |
 | storageclass.name | The name for StorageClass. | `local-path` |
-| ingress.className | Specify the ingress class, traefik or nginx. | `nginx` |
-
+| ingress.className | Specify the ingress class, traefik or nginx. | `traefik` |
+| tls.enabled | Enable or disable tls for ingress. | `false` |
+| tls.crt | The content of certificate file| none |
+| tls.key | The content of key file | none|
 
 **NOTE**: [`local-path`](https://github.com/rancher/local-path-provisioner) is used by k3s. If you want to use `local-path`, running the command,
 
@@ -48,7 +50,7 @@ Due to the traefik and ingress has different session sticky/affinity annotations
 If your ingress class is `traefik`, running the command:
 
 ```
-helm install rustfs -n rustfs --create-namespace ./ --set ingress.className="traefik"
+helm install rustfs rustfs/rustfs -n rustfs --create-namespace --set ingress.className="traefik"
 ```
 
 ## Installation with nginx controller
@@ -56,7 +58,7 @@ helm install rustfs -n rustfs --create-namespace ./ --set ingress.className="tra
 If your ingress class is `nginx`, running the command:
 
 ```
-helm install rustfs -n rustfs --create-namespace ./ --set ingress.className="nginx"
+helm install rustfs rustfs/rustfs -n rustfs --create-namespace --set ingress.className="nginx"
 ```
 
 # Installation check and rustfs login
