@@ -2,8 +2,28 @@ apiVersion: v1
 entries:
   rustfs:
   - apiVersion: v2
+    appVersion: 1.0.0-alpha.72
+    created: "2025-12-05T14:30:56.646572174+08:00"
+    description: RustFS helm chart to deploy RustFS on kubernetes cluster.
+    digest: d43b32291e6c2bf1b67a387433d58b14bf1e3f601a9fd3cdc39291c0f3a9b975
+    name: rustfs
+    type: application
+    urls:
+    - https://charts.rustfs.com/rustfs-0.0.72.tgz
+    version: 0.0.72
+  - apiVersion: v2
+    appVersion: 1.0.0-alpha.71
+    created: "2025-12-05T14:30:56.645101999+08:00"
+    description: RustFS helm chart to deploy RustFS on kubernetes cluster.
+    digest: 3e033dbbac66cc66da7e35209a06289273262c0a277cea5f59fe5b2bdccd0cef
+    name: rustfs
+    type: application
+    urls:
+    - https://charts.rustfs.com/rustfs-0.0.71.tgz
+    version: 0.0.71
+  - apiVersion: v2
     appVersion: 1.0.0-alpha.70
-    created: "2025-11-29T20:00:28.466298+08:00"
+    created: "2025-12-05T14:30:56.632112149+08:00"
     description: RustFS helm chart to deploy RustFS on kubernetes cluster.
     digest: 27749811ce46b40a47576a9d147aa55497654b4555f5da77ac4f5c4f3135cd79
     name: rustfs
@@ -13,7 +33,7 @@ entries:
     version: 0.0.70
   - apiVersion: v2
     appVersion: 1.0.0-alpha.69
-    created: "2025-11-29T20:00:28.465808+08:00"
+    created: "2025-12-05T14:30:56.630691848+08:00"
     description: RustFS helm chart to deploy RustFS on kubernetes cluster.
     digest: 7267eede59f1247e7aefc7fbb0ea1a4cb2931d6e002fe8eb754d91de55d5308e
     name: rustfs
@@ -23,7 +43,7 @@ entries:
     version: 0.0.69
   - apiVersion: v2
     appVersion: 1.0.0-alpha.68
-    created: "2025-11-29T20:00:28.465437+08:00"
+    created: "2025-12-05T14:30:56.629098378+08:00"
     description: RustFS helm chart to deploy RustFS on kubernetes cluster.
     digest: f754487c71afe643ea76359fc1ae98063fe852869fb0cc800a2af98e9f0c0735
     name: rustfs
@@ -31,4 +51,4 @@ entries:
     urls:
     - https://charts.rustfs.com/rustfs-0.0.68.tgz
     version: 0.0.68
-generated: "2025-11-29T20:00:28.46353+08:00"
+generated: "2025-12-05T14:30:56.627320736+08:00"
